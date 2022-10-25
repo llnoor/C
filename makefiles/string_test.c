@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "s21_string.h"
+#include "string.h"
 
 #ifdef STRLEN
 #define s21_test s21_strlen_test()
