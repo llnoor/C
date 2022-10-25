@@ -1,5 +1,5 @@
-#ifndef SRC_S21_STRING_H_
-#define SRC_S21_STRING_H_
+#ifndef SRC_STRING_H_
+#define SRC_STRING_H_
 #include <stdlib.h>
 
 size_t s21_strlen(const char *str);
@@ -10,4 +10,4 @@ char *s21_strchr(const char *str, int ch);
 char *s21_strstr(const char *searchHere, const char *findThis);
 int s21_strstr_match(const char *searchHere, const char *findThis);
 
-#endif  // SRC_S21_STRING_H_
+#endif  // SRC_STRING_H_
