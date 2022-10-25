@@ -1,4 +1,4 @@
-#include "s21_string.h"
+#include "string.h"
 #include <stdlib.h>
 
 size_t s21_strlen(const char *str) {
