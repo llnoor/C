@@ -1,16 +1,16 @@
 all: graph
 
-graph: dynamic.o graph.o notation.o graph.o
-	gcc graph.o dynamic.o notation.o graph.o -o ../build/graph
+graph: s21_dynamic.o graph.o s21_notation.o s21_graph.o
+	gcc graph.o s21_dynamic.o s21_notation.o s21_graph.o -o ../build/graph
 
-dynamic.o: dynamic.h dynamic.c
-	gcc -c -Wall -Wextra -Werror dynamic.c
+s21_dynamic.o: s21_dynamic.h s21_dynamic.c
+	gcc -c -Wall -Wextra -Werror s21_dynamic.c
 
-notation.o: notation.h notation.c
-	gcc -c -Wall -Wextra -Werror notation.c
+s21_notation.o: s21_notation.h s21_notation.c
+	gcc -c -Wall -Wextra -Werror s21_notation.c
 	
-graph.o: graph.h graph.c
-	gcc -c -Wall -Wextra -Werror graph.c
+s21_graph.o: s21_graph.h s21_graph.c
+	gcc -c -Wall -Wextra -Werror s21_graph.c
 
 graph.o: graph.c
 	gcc -c -Wall -Wextra -Werror graph.c
