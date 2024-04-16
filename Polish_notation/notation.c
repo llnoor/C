@@ -13,8 +13,8 @@ float start_notation(char *data, float x) {
     char output[100] = "";
     char output_temp[100];
     while (*data != '\0') {
-        if (s21_isalnum(*data)) {
-            if (s21_isalnum(*(data+1))) {
+        if (C_isalnum(*data)) {
+            if (C_isalnum(*(data+1))) {
               sprintf(output_temp, "%c", *data);
               strcat(output, output_temp);
             } else {
@@ -22,23 +22,23 @@ float start_notation(char *data, float x) {
               strcat(output, output_temp);
             }
         } else if (*data == '(') {
-            s21_push(*data);
+            C_push(*data);
         } else if (*data == ')') {
-            while ((e_x = s21_pop()) != '(') {
+            while ((e_x = C_pop()) != '(') {
                 sprintf(output_temp, "%c ", e_x);
                 strcat(output, output_temp);
             }
         } else {
-            while ( s21_priority(&stack[stack_top]) >= s21_priority(data) ) {
-                sprintf(output_temp, "%c ", s21_pop());
+            while ( C_priority(&stack[stack_top]) >= C_priority(data) ) {
+                sprintf(output_temp, "%c ", C_pop());
                 strcat(output, output_temp);
             }
-            s21_push(*data);
+            C_push(*data);
         }
         data++;
     }
     while (stack_top != -1) {
-        sprintf(output_temp, "%c ", s21_pop());
+        sprintf(output_temp, "%c ", C_pop());
         strcat(output, output_temp);
     }
     return calc_notation(output, x);

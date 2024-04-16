@@ -1,4 +1,4 @@
-#include "s21_dynamic.h"
+#include "C_dynamic.h"
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,5 +1,3 @@
-// Copyright 2022 TEAM41
-
 #include <stdio.h>
 
 int fun_Graphics(int, int, int, int, int, int);

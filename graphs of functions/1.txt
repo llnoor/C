@@ -1,2 +1,0 @@
-Polish notation
-try sin(cos(2*x))

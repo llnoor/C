@@ -1,9 +1,9 @@
-#include "s21_graph.h"
-#include "s21_notation.h"
+#include "C_graph.h"
+#include "C_notation.h"
 #include <stdio.h>
 #include <math.h>
 
-void s21_graph(char *output) {
+void C_graph(char *output) {
     output = output;
     float i_def =  4 * M_PI / 79;
     float j_def =  2./ 24;

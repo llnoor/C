@@ -1,7 +1,7 @@
 #include "string.h"
 #include <stdlib.h>
 
-size_t s21_strlen(const char *str) {
+size_t C_strlen(const char *str) {
     int i = 0;
     while ( *str != '\0' ) {
         i++;
@@ -10,7 +10,7 @@ size_t s21_strlen(const char *str) {
     return i;
 }
 
-int s21_strcmp(const char *str1, const char *str2) {
+int C_strcmp(const char *str1, const char *str2) {
     char char1, char2;
     const char *p_char1 = (const char *) str1;
     const char *p_char2 = (const char *) str2;
@@ -25,7 +25,7 @@ int s21_strcmp(const char *str1, const char *str2) {
     return char1 - char2;
 }
 
-char *s21_strcpy(char *toHere, const char *fromHere) {
+char *C_strcpy(char *toHere, const char *fromHere) {
     if (toHere == NULL) {
         return NULL;
     }
@@ -39,7 +39,7 @@ char *s21_strcpy(char *toHere, const char *fromHere) {
     return temp_toHere;
 }
 
-char *s21_strcat(char *toHere, const char *fromHere) {
+char *C_strcat(char *toHere, const char *fromHere) {
     if (toHere == NULL) {
         return NULL;
     }
@@ -56,7 +56,7 @@ char *s21_strcat(char *toHere, const char *fromHere) {
     return temp_toHere;
 }
 
-char *s21_strchr(const char *str, int ch) {
+char *C_strchr(const char *str, int ch) {
     int i = 0;
     while (str[i] && str[i] != ch) {
         i++;
@@ -68,7 +68,7 @@ char *s21_strchr(const char *str, int ch) {
     }
 }
 
-int s21_strstr_match(const char *searchHere, const char *findThis) {
+int C_strstr_match(const char *searchHere, const char *findThis) {
     while (*searchHere && *findThis) {
         if (*searchHere != *findThis) {
             return 0;
@@ -79,9 +79,9 @@ int s21_strstr_match(const char *searchHere, const char *findThis) {
     return (*findThis == '\0');
 }
 
-char *s21_strstr(const char *searchHere, const char *findThis) {
+char *C_strstr(const char *searchHere, const char *findThis) {
     while ( *searchHere != '\0' ) {
-        if ( (*searchHere == *findThis) && (s21_strstr_match(searchHere, findThis)) ) {
+        if ( (*searchHere == *findThis) && (C_strstr_match(searchHere, findThis)) ) {
             return (char*)searchHere;
         }
         searchHere++;

@@ -1,5 +1,3 @@
-// Copyright 2022 TEAM41
-
 #include <stdio.h>
 #include <termios.h>
 #include <unistd.h>
