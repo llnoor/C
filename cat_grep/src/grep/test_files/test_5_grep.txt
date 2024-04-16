@@ -1,0 +1,32 @@
+// Copyright 2023 janyceel@student.21-school.ru
+#include <stdio.h>
+#include <string.h>
+
+char *strcat(char *toHere, const char *fromHere) {
+    if (toHere == NULL) {
+        return NULL;
+    }
+    char *temp_toHere = toHere;
+    while ( *toHere != '\0' ) {
+        toHere++;
+    }
+    while ( *fromHere != '\0' ) {
+        *toHere = *fromHere;
+        toHere++;
+        fromHere++;
+    }
+    *toHere = '\0';
+    return temp_toHere;
+}
+
+char *strchr(const char *str, int ch) {
+    int i = 0;
+    while (str[i] && str[i] != ch) {
+        i++;
+    }
+    if (ch == str[i]) {
+        return ((char*)str + i);
+    } else {
+        return NULL;
+    }
+}

@@ -1,0 +1,27 @@
+// Copyright 2023 janyceel@student.21-school.ru
+#include "string.h"
+#include <stdlib.h>
+
+size_t strlen(const char *str) {
+    int i = 0;
+    while ( *str != '\0' ) {
+        i++;
+        str++;
+    }
+    return i;
+}
+
+int strcmp(const char *str1, const char *str2) {
+    char char1, char2;
+    const char *p_char1 = (const char *) str1;
+    const char *p_char2 = (const char *) str2;
+    do {
+        char1 = *p_char1;
+        char2 = *p_char2;
+        p_char1++;
+        p_char2++;
+        if (char1 == '\0')
+        return char1 - char2;
+    } while (char1 == char2);
+    return char1 - char2;
+}
