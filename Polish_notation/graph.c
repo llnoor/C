@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include "s21_dynamic.h"
-#include "s21_notation.h"
-#include "s21_graph.h"
+#include "dynamic.h"
+#include "notation.h"
+#include "graph.h"
 
 char * no_space_in(char * S, char * res) {
     int i, j;
@@ -49,7 +49,7 @@ int main() {
     check_sin_cos_tan_ctg(d, "ctg");
     check_ln(d);
     check_sqrt(d);
-    s21_graph(d);
+    graph(d);
     } else {
         printf("Incorrect string");
     }
