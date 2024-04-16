@@ -1,5 +1,5 @@
-#include "s21_notation.h"
-#include "s21_dynamic.h"
+#include "notation.h"
+#include "dynamic.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -129,7 +129,7 @@ void check_sqrt(char *d) {
   }
 }
 
-int s21_priority(char *x) {
+int priority(char *x) {
     if ( *x == '(' )
         return 0;
     if ( *x == '+' || *x == '-' )
@@ -191,11 +191,11 @@ float calc_notation(char *output, float x) {
     return pop();
 }
 
-void s21_push(char str) {
+void push(char str) {
     stack[++stack_top] = str;
 }
 
-char s21_pop() {
+char pop() {
     if ( stack_top == -1 ) {
       return -1;
     } else {
@@ -203,7 +203,7 @@ char s21_pop() {
     }
 }
 
-int s21_isalnum(const char sym) {
+int isalnum(const char sym) {
        return ( ((sym >= 'A')  &&  (sym <= 'Z')) || ((sym >= 'a')
        &&  (sym <= 'z')) || ((sym >= '0')  &&  (sym <= '9')) || (sym == '.'));
 }
